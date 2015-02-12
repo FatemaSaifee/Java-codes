@@ -24,4 +24,6 @@ public class AverageArray
 		a1.show();
 	}
 
+	
+
 }

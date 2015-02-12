@@ -4,12 +4,30 @@ public class SortList{
 		a=a1;
 	}
 	void sort(){
-		min=a[0];
-		for(i=1;i<5;i++){
+		for(int j = 0; j<a.length;j++)
+		{
 			
-			if (a[i]<min){
-				min=a[i];
-			} 
+			for(i=0;i<a.length;i++){
+				
+				if (a[j]<a[i])
+					{
+						int temp=a[j];
+						a[j]=a[i];
+						a[i]=temp;
+					}
+			}
+			 
 		}
+	}
+	void show(){
+		for (i=0;i<a.length ;i++ ) {
+			System.out.println(a[i]);
+		}
+	}
+	public static void main(String[] args) {
+		int arr[] ={12,45,67,23,110};
+		SortList l = new SortList(arr);
+		l.sort();
+		l.show();
 	}
 }
